@@ -1,0 +1,579 @@
+
+<!-- saved from url=(0048)https://http1.akamai.com/demo/h1_demo_frame.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="Keywords" content="HTTP/2, HTTP/2.0, H2, Akamai, Cloud Computing, CDN, Mobile Experience, Content Delivery, Application Acceleration, Application Performance Management">
+    <title>HTTP/2: the Future of the Internet | Akamai</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+	html {
+	    color: #444;
+	    font-family: helvetica, arial, sans-serif;
+	    font-size: 100%;
+	    line-height: 136%;
+	}
+
+    .img-wrap {
+        position:  relative;
+        padding-bottom: 100%;
+        height: 0;
+/*        width: 608px;*/
+        max-width: 100%;
+    }
+    .img-interior{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+	
+	.row {
+	    overflow: hidden;
+	}
+
+	.frame-container {
+		width:100%;
+	    max-width: 100%;
+	    float: left;
+	    box-sizing: border-box;
+	    padding-right: 2%;
+	    padding-left: 2%;
+	}
+
+	.frame-container img {
+	    float: left;
+	    max-width: 5%;
+	    height: auto;
+	}
+	img.respond {width: 99%;}
+
+	.callout {
+	    background: url(tab-shadow.png) repeat-y scroll left top #dfebf9;
+	    color: #666;
+	    padding: 10px 5% ;
+	    -moz-border-radius : 6px;
+	    -webkit-border-radius: 6px;
+	    border-radius: 6px;
+	}
+
+	.container {
+	    margin: auto;
+	    max-width: 932px;
+	}
+
+	.highlight {
+	    color: #FF9933;
+	}
+	h1 {
+	    font-size: 150%;
+	    line-height: normal;
+	}
+
+	h2 {
+	    font-size: 125%;
+	    line-height: normal;
+	}
+
+	a, a:link {
+	    color: #09c;
+	    text-decoration: none;
+	}
+
+	ul {
+	    padding-left: 5%;
+	}
+
+	.callout1 {
+	    position: relative;
+	    margin-top: 2%;
+	    margin-bottom: 2%;
+	    background-color: #eef4f9;
+	    -moz-border-radius: 6px;
+	    -webkit-border-radius: 6px;
+	    border-radius: 6px;
+
+	}
+
+	@media (min-width: 850px) {
+	    #main-container #blurb #additional {
+	        padding: 10px 5%;
+	    }
+
+	    #main-container #blurb {
+	        float: left;
+	        width: 60%;
+	        font-size: 100%;
+	        box-sizing: border-box;
+	        padding-right: 10px
+	    }
+
+	    #main-container #additional {
+	        float: right;
+	        width: 35%;
+	        box-sizing: border-box
+	    }
+
+	    #main-container br {
+	        clear: both
+	    }
+	}
+
+	/***FIRST STYLE THE BUTTON***/
+	input#gobutton{
+	    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+	    padding:5px 25px; /*add some padding to the inside of the button*/
+	    background:#35b128; /*the colour of the button*/
+	    border:1px solid #33842a; /*required or the default border for the browser will appear*/
+	    /*give the button curved corners, alter the size as required*/
+	    -moz-border-radius: 10px;
+	    -webkit-border-radius: 10px;
+	    border-radius: 10px;
+	    /*give the button a drop shadow*/
+	    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	    box-shadow: 0 0 4px rgba(0,0,0, .75);
+	    /*style the text*/
+	    color:#f3f3f3;
+	    font-size:1.1em;
+	}
+	/***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+	input#gobutton:hover, input#gobutton:focus{
+	    background-color :#399630; /*make the background a little darker*/
+	    /*reduce the drop shadow size to give a pushed button effect*/
+	    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	    box-shadow: 0 0 1px rgba(0,0,0, .75);
+	}
+	</style>
+	<script>
+	    function imageLoadTime() {
+	            var lapsed = navSupport ? window.performance.now() : Date.now() - pageStart;
+				document.getElementById("imgTiming").innerHTML = ((lapsed) / 1000).toFixed(2)
+	    }
+        var pageStart = Date.now();
+		var navSupport = !(!('performance' in window) || !('timing' in window.performance) || !('navigation' in window.performance));
+    </script>
+</head>
+<body marginheight="0">
+<div class="frame-container">
+    <div align="center">
+                   <h2 class="highlight"><a href="https://http1.akamai.com/demo/h1_demo_frame.html">HTTP/1.1</a></h2>
+
+    </div>
+    <div id="IMGLoad"><div>Latency: <strong class="highlight">ms</strong></div><div>Load time: <strong class="highlight"><span id="imgTiming">17.60</span>s</strong></div></div>
+    <div class="img-wrap">
+        <div class="img-interior">
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-0.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-1.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-2.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-3.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-4.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-5.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-6.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-7.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-8.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-9.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-10.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-11.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-12.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-13.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-14.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-15.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-16.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-17.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-18.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-20.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-21.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-22.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-23.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-24.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-25.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-26.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-27.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-28.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-29.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-30.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-31.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-32.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-33.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-34.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-35.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-36.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-37.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-38.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-40.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-41.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-42.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-43.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-44.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-45.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-46.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-47.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-48.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-49.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-50.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-51.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-52.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-53.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-54.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-55.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-56.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-57.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-58.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-60.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-61.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-62.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-63.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-64.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-65.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-66.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-67.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-68.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-69.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-70.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-71.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-72.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-73.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-74.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-75.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-76.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-77.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-78.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-80.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-81.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-82.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-83.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-84.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-85.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-86.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-87.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-88.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-89.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-90.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-91.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-92.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-93.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-94.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-95.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-96.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-97.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-98.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-100.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-101.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-102.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-103.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-104.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-105.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-106.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-107.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-108.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-109.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-110.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-111.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-112.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-113.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-114.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-115.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-116.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-117.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-118.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-120.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-121.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-122.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-123.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-124.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-125.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-126.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-127.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-128.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-129.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-130.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-131.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-132.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-133.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-134.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-135.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-136.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-137.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-138.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-140.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-141.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-142.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-143.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-144.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-145.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-146.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-147.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-148.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-149.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-150.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-151.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-152.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-153.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-154.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-155.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-156.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-157.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-158.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-160.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-161.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-162.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-163.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-164.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-165.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-166.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-167.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-168.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-169.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-170.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-171.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-172.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-173.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-174.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-175.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-176.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-177.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-178.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-180.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-181.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-182.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-183.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-184.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-185.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-186.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-187.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-188.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-189.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-190.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-191.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-192.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-193.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-194.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-195.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-196.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-197.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-198.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-200.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-201.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-202.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-203.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-204.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-205.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-206.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-207.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-208.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-209.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-210.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-211.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-212.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-213.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-214.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-215.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-216.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-217.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-218.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-220.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-221.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-222.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-223.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-224.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-225.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-226.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-227.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-228.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-229.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-230.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-231.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-232.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-233.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-234.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-235.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-236.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-237.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-238.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-240.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-241.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-242.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-243.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-244.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-245.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-246.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-247.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-248.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-249.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-250.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-251.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-252.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-253.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-254.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-255.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-256.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-257.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-258.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-260.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-261.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-262.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-263.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-264.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-265.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-266.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-267.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-268.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-269.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-270.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-271.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-272.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-273.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-274.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-275.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-276.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-277.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-278.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-280.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-281.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-282.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-283.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-284.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-285.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-286.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-287.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-288.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-289.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-290.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-291.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-292.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-293.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-294.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-295.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-296.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-297.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-298.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-300.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-301.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-302.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-303.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-304.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-305.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-306.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-307.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-308.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-309.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-310.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-311.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-312.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-313.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-314.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-315.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-316.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-317.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-318.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-320.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-321.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-322.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-323.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-324.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-325.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-326.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-327.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-328.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-329.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-330.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-331.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-332.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-333.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-334.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-335.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-336.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-337.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-338.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-340.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-341.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-342.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-343.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-344.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-345.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-346.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-347.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-348.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-349.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-350.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-351.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-352.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-353.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-354.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-355.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-356.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-357.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-358.png">
+		    </div>
+		    <div class="row">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-360.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-361.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-362.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-363.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-364.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-365.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-366.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-367.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-368.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-369.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-370.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-371.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-372.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-373.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-374.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-375.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-376.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-377.png">
+		        <img height="32" width="32" onload="imageLoadTime()" src="./tile-378.png">
+		    </div>
+		</div>
+    </div>
+			    <div id="PageLoadMetrics">
+        
+    
+       
+           <div style="float: left"><small>Demo concept inspired by <a target="_parent" href="http://http2.golang.org/gophertiles">Golang's Gophertiles</a></small></div>
+       
+    </div>
+</div>
+
+
+</body></html>
